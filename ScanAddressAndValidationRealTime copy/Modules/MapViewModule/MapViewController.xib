@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="ScanAddressAndValidationRealTime" customModuleProvider="target">
+            <connections>
+                <outlet property="dismissButton" destination="s2b-tA-Z9e" id="izn-Fo-K08"/>
+                <outlet property="mapView" destination="mZg-0L-Svb" id="NLT-SQ-5OZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZg-0L-Svb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2b-tA-Z9e">
+                    <rect key="frame" x="20" y="48" width="49" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="8td-ev-Mn3"/>
+                        <constraint firstAttribute="height" constant="40" id="awu-CX-Sfv"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.fill" catalog="system">
+                        <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="dismissMapButtonAction:" destination="-1" eventType="touchUpInside" id="wSb-gb-eVb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mZg-0L-Svb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2sK-gZ-uaH"/>
+                <constraint firstItem="s2b-tA-Z9e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="KQg-r5-luN"/>
+                <constraint firstItem="s2b-tA-Z9e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="LzW-XX-Awe"/>
+                <constraint firstItem="mZg-0L-Svb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UtV-LH-Py9"/>
+                <constraint firstAttribute="bottom" secondItem="mZg-0L-Svb" secondAttribute="bottom" id="Ztj-mG-suA"/>
+                <constraint firstAttribute="trailing" secondItem="mZg-0L-Svb" secondAttribute="trailing" id="sOH-M6-jRg"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
